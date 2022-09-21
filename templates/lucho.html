@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo formulario</title>
+</head>
+<body>
+    <a href="index.html"> Ir a home </a>
+    <form> <!-- todo el contenido del formulario debe ir en la etiqueta form-->
+        <!--input de tipo texto -->
+        <label form="inputNombre"> Nombre </label>
+        <input placeholder="nombre" autocomplete="on" type="text" id="inputNombre" name="inputNombre">
+        <!--input de tipo password -->
+        <br>
+        <label form="inputContraseña"> Contraseña </label>
+        <input type="password">
+
+        <h3> Jornada laboral</h3>
+        <!--input de tipo radio -->
+        <!--con el atributo name en radio se agrupan-->
+        <input type="radio" name="radioJornada" id="radioAM" value="am">
+        <label for="radioAM"> Mañana</label>
+        <input type="radio" name="radioJornada" id="radioPM" value="pm">
+        <label for="radioPM"> Tarde</label>
+        <input type="radio" name="radioJornada" id="radioNOCHE" value="noche">
+        <label for="radioNOCHE"> Noche</label>
+
+        <!-- input checkbox permite seleccion multiple-->
+        <br>
+        <h3> Medio de transporte utilizado</h3>
+        <input type="checkbox" id="checkboxBici" name="checkboxBici" value="Bicicleta">
+        <label for="checkboxBici"> Bicicleta</label>
+        <input type="checkbox" id="checkboxBus" name="checkboxBus" value="Bus">
+        <label for="checkboxBus"> Bus</label>
+        <input type="checkbox" id="checkboxParticular" name="checkboxParticular" value="Particular">
+        <label for="checkboxParticular"> Particular</label>
+        
+        <br>
+        <!-- input de tipo color-->
+        <label for="inputColor"> Seleccione color favorito</label>
+        <input type="color" id="inputColor" name="inputColor">
+        <br>
+
+        <!-- input type date-->
+        <label for="inputFN"> Seleccione fecha de nacimiento</label>
+        <input type="date" min="1952-01-03" id="inputFN" name="inputFN">
+
+        <br>
+        <!-- fecha y hora-->
+        <label for="inputFH"> Fecha y hora de ingreso</label>
+        <input type="datetime-local" id="inputFH" name="inputFH">
+        <br>
+        <!-- input Email-->
+        <label for="inputEmail"> E-mail  </label> 
+        <input required type="email"  id="inputEmail" name="inputEmail">
+        <br>
+        <!-- Input file -->
+        <label for="inputFoto"> Foto</label>
+        <input type="file" id="inputFoto" name="inputFoto">
+        <br>
+        <!-- input  mont-->
+        <label for="inputMes"> Mes ultimas vacaciones</label>
+        <input type="month" id="inputMes" name="inputMes">
+        <br>
+        <!-- input number-->
+        <label for="inputTalla"> Talla calzado (35-42) </label>
+        <input type="number" id="inputTalla" name="inputTalla" min="35" max="42">
+        <br>
+        <!-- input tel -->
+        <label for="inputTel"> Telefono</label>
+        <input type="tel" id="inputTel" placeholder="+57 xxx-xxx-xxxx"
+        pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}"maxlength="10" size="10" name="inputTel">
+        <br>
+        <!-- input url-->
+        <label for="inputSitioWeb"> Sitio web personal</label>
+        <input type="url" id="inputSitioWeb" mane="inputSitioWeb">
+        <br>
+        <!-- expresiones regulares - codigo de pais que sean 3 letras-->
+        <label for="inputCodigoPais"> Codigo pais</label>
+        <input type="text" id="inputCodigoPais" name="inputCodigoPais"
+        pattern="[A-Za-z]{3}" tittle="Tres letras para el codigo">
+        <br>
+        <!-- ejemplo lista-->
+        <label> Dia de la semana </label>
+        <input list="listaDias" name="dia">
+        <datalist id="listaDias">
+            <option value="Lunes">
+            <option value="Martes">
+            <option value="Miercoles">
+            <option value="Jueves">
+            <option value="Viernes">
+        </datalist>
+        <br>
+
+        <!-- input submit-->
+        <input type="submit" value="Registrar">
+
+
+    </form>
+    
+</body>
+</html>
